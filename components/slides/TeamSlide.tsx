@@ -22,7 +22,7 @@ const TeamSlide: React.FC = () => {
         {TEAM.map((m, i) => (
           <motion.div key={i} initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.15 }} className="group relative">
             <div className="h-[400px] bg-gray-100 mb-8 overflow-hidden relative">
-              <img src={`./dist/src/${m.img}/500/800`} alt={m.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500" />
+              <img src={`img/${m.img}/500/800`} alt={m.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500" />
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ backgroundColor: `${m.color}33` }} />
             </div>
 
