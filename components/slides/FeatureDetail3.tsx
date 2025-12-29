@@ -8,7 +8,7 @@ export default function FeatureDetail1() {
         {/* Left Side: Technical Info */}
         <div className="w-1/3 flex flex-col justify-between py-10">
           <div>
-            <span className="text-2xl font-black text-[#E2FF00] bg-black px-4 py-1 mb-6 inline-block">FUNCTION 01</span>
+            <span className="text-2xl font-black text-[#E2FF00] bg-black px-4 py-1 mb-6 inline-block">FUNCTION 03</span>
             <h2 className="text-7xl font-black text-black leading-tight uppercase mb-8">
               Real-time
               <br />
@@ -42,9 +42,9 @@ export default function FeatureDetail1() {
 
         {/* Right Side: Huge Screenshot */}
         <div className="flex-1 relative">
-          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="w-full h-full bg-[#E2FF00]/5 border-[20px] border-black overflow-hidden shadow-2xl">
-            <img src="https://picsum.photos/seed/chat-large/1600/1200" className="w-full h-full object-cover" alt="Chat ScreenShot" />
-            <div className="absolute top-10 right-10 bg-black text-[#E2FF00] px-6 py-3 text-2xl font-black italic">MAIN UI_v2.0</div>
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="w-full h-full bg-[#fff]/5  overflow-hidden ">
+            <img src="../../img/123.png" className="w-full object-cover border-[2px] border-black" alt="Chat ScreenShot" style={{ marginTop: "150px" }} />
+            {/* <div className="absolute top-10 right-10 bg-black text-[#E2FF00] px-6 py-3 text-2xl font-black italic">MAIN UI_v2.0</div> */}
           </motion.div>
           {/* Decorative elements */}
           <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#7FFFD4] -z-10" />

@@ -1,6 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+// import oyImg from "../public/img/oy";
+// import mhImg from "../../img/mh";
+// import jsImg from "../../img/js";
+
 const TEAM = [
   {
     name: "오윤",
@@ -14,14 +18,14 @@ const TEAM = [
     role: "Backend Dev / Git & notion direct",
     parts: ["Git & Notion 관리자", "인증 파트(router: /auth) - 회원가입 ", "프로젝트 파트(router: /projects)", "댓글 파트(router: /comments)"],
     color: "#E2FF00",
-    img: "oy.png",
+    img: "mh.png",
   },
   {
     name: "김지선",
     role: "Backend Dev / 기타 자료 정리",
     parts: ["공용 문서 관리 및 발표 자료 제작", "인증 파트(router: /auth) - 로그인 및 토큰 발급 ", "유저 파트(router: /users)", "할일 파트(router: /tasks)"],
     color: "#E2FF00",
-    img: "oy.png",
+    img: "js.png",
   },
 ];
 
@@ -36,15 +40,11 @@ const TeamSlide: React.FC = () => {
         {/* <div className="bg-black text-white px-8 py-4 text-3xl font-black rotate-3">3 PROFESSIONALS</div> */}
       </div>
 
-      <div className="grid grid-cols-3 gap-8">
+      <div className="grid grid-cols-3 gap-8" style={{ paddingTop: "30px" }}>
         {TEAM.map((m, i) => (
           <motion.div key={i} initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.15 }} className="group relative">
             <div className="h-[400px] bg-gray-100 mb-8 overflow-hidden relative">
-              <img
-                src={`https://github.com/KimDay366/nb6-t4-middle/blob/main/img/${m.img}/500/800`}
-                alt={`${m.name} 이미지`}
-                className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
-              />
+              <img src={`../../img/${m.img}`} alt={`${m.name} 이미지`} className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500" />
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ backgroundColor: `${m.color}33` }} />
             </div>
 

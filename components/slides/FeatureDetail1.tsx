@@ -1,14 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const images = ["https://picsum.photos/seed/chat1/1600/1200", "https://picsum.photos/seed/chat2/1600/1200", "https://picsum.photos/seed/chat3/1600/1200"];
-
 export default function FeatureDetail1() {
-  const [index, setIndex] = useState(0);
-
-  const next = () => setIndex((prev) => (prev + 1) % images.length);
-  const prev = () => setIndex((prev) => (prev - 1 + images.length) % images.length);
-
   return (
     <div className="w-full h-full p-24 bg-white flex flex-col">
       <div className="flex gap-20 h-full">
@@ -17,28 +10,24 @@ export default function FeatureDetail1() {
           <div>
             <span className="text-2xl font-black text-[#E2FF00] bg-black px-4 py-1 mb-6 inline-block">FUNCTION 01</span>
             <h2 className="text-7xl font-black text-black leading-tight uppercase mb-8">
-              Real-time
-              <br />
-              Chat Engine
+              ERD <br /> Modeling 작업
             </h2>
-            <p className="text-2xl font-medium text-black/60 leading-relaxed break-keep">
-              단순한 텍스트 전달을 넘어, 실시간 읽음 처리, 타이핑 인디케이터, 파일 전송 상태 동기화가 완벽하게 구현된 채팅 모듈입니다.
-            </p>
+            <p className="text-2xl font-medium text-black/60 leading-relaxed break-keep">ERD 작업에 대한 여러 의견을 취합하여 수정 필요 😉</p>
           </div>
 
           <div className="space-y-8">
             <div className="grid grid-cols-2 gap-4">
               <div className="p-6 bg-gray-50 border-l-8 border-[#E2FF00]">
                 <h4 className="text-xs font-black text-black/30 mb-2 uppercase">Tech Stack</h4>
-                <p className="text-xl font-bold">Socket.io</p>
+                <p className="text-xl font-bold">dbdiagram.io</p>
               </div>
-              <div className="p-6 bg-gray-50 border-l-8 border-[#7FFFD4]">
+              {/* <div className="p-6 bg-gray-50 border-l-8 border-[#7FFFD4]">
                 <h4 className="text-xs font-black text-black/30 mb-2 uppercase">Performance</h4>
-                <p className="text-xl font-bold">Latency {"<"} 100ms</p>
-              </div>
+                <p className="text-xl font-bold">{"<"} 100ms</p>
+              </div> */}
             </div>
             <ul className="space-y-4">
-              {["End-to-End Encryption", "Message Persistence (Redis)", "Infinite Scroll History"].map((item, i) => (
+              {["수정 필요 1", "수정 필요 2", "수정 필요 3"].map((item, i) => (
                 <li key={i} className="flex items-center gap-4 text-xl font-bold">
                   <div className="w-3 h-3 bg-black rounded-full" /> {item}
                 </li>
@@ -48,40 +37,11 @@ export default function FeatureDetail1() {
         </div>
 
         {/* Right Side: Huge Screenshot */}
-        {/* <div className="flex-1 relative">
-          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="w-full h-full bg-[#E2FF00]/5 border-[20px] border-black overflow-hidden shadow-2xl">
-            <img src="https://picsum.photos/seed/chat-large/1600/1200" className="w-full h-full object-cover" alt="Chat ScreenShot" />
-            <div className="absolute top-10 right-10 bg-black text-[#E2FF00] px-6 py-3 text-2xl font-black italic">MAIN UI_v2.0</div>
-          </motion.div> */}
-
-        {/* Right Side: Image Slider */}
-        <div className="flex-1 relative overflow-hidden">
-          <div className="w-full h-full border-[20px] border-black bg-[#E2FF00]/5 shadow-2xl relative">
-            <AnimatePresence mode="wait">
-              <motion.img
-                key={index}
-                src={images[index]}
-                alt="Chat Screenshot"
-                className="absolute inset-0 w-full h-full object-cover"
-                initial={{ opacity: 0, x: 80 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -80 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
-              />
-            </AnimatePresence>
-
-            {/* <div className="absolute top-10 right-10 bg-black text-[#E2FF00] px-6 py-3 text-2xl font-black italic">MAIN UI_v{index + 1}.0</div> */}
-
-            {/* Controls */}
-            <div className="absolute bottom-10 left-10 flex gap-4">
-              <button onClick={prev} className="px-6 py-3 bg-black text-[#fff] font-black">
-                ←
-              </button>
-              <button onClick={next} className="px-6 py-3 bg-black text-[#fff] font-black">
-                →
-              </button>
-            </div>
-          </div>
+        <div className="flex-1 relative">
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="w-full h-full bg-[#fff]/5  overflow-hidden ">
+            <img src="../../img/ERD_fin.png" className="w-full object-cover border-[2px] border-black" alt="Chat ScreenShot" style={{ marginTop: "150px" }} />
+            {/* <div className="absolute top-10 right-10 bg-black text-[#E2FF00] px-6 py-3 text-2xl font-black italic">MAIN UI_v2.0</div> */}
+          </motion.div>
 
           {/* Decorative elements */}
           <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#7FFFD4] -z-10" />
