@@ -2,10 +2,15 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const GOALS = [
-  { week: "FIN 01", title: "ERD, R&R 분배", desc: ["ERD 모델링", "각 파트 R&R 분리 작업", "팀 규칙 및 파일 구조", "공통 파일 생성"], date: "작업 기간 : 25.12.22 ~ 30" },
-  { week: "NEXT 01", title: "기능 구현 및 테스트", desc: ["각자 맡은 파트 구현", "개별 테스트 작업"], date: "작업 기간 : 25.12.22 ~ 30" },
-  { week: "NEXT 02", title: "오류 수정 및 최적화", desc: ["프로젝트 전체 검수", "서비스 최적화", "API 문서화"], date: "작업 기간 : 25.12.22 ~ 30" },
-  { week: "FINAL", title: "최종 완성", desc: ["프로젝트 배포", "최종 발표"] },
+  {
+    week: "FIN 01",
+    title: "ERD, R&R 분배",
+    desc: ["팀 규칙 및 파일 구조", "ERD 모델링", "Prisma Schema 생성", "공통 파일 생성", "인증 파트(router: /auth) 1차 개발", "각 파트 R&R 분리 작업"],
+    date: "작업 기간 : 25.12.22 ~ 29",
+  },
+  { week: "NEXT 01", title: "개인 파트 작업", desc: ["개별 파트 기능 구현 작업", "파트 별 크로스 테스트 작업"], date: "작업 기간 : 25.12.30 ~ 26.1.9" },
+  { week: "NEXT 02", title: "오류 수정 및 최적화", desc: ["프로젝트 전체 검수", "서비스 최적화", "API 문서화"], date: "작업 기간 : 26.1.12 ~ 13" },
+  { week: "FINAL", title: "최종 완성", desc: ["프로젝트 배포", "최종 발표"], date: "작업 기간 : 26.1.14" },
 ];
 
 const RoadmapSlide: React.FC = () => {
@@ -31,13 +36,20 @@ const RoadmapSlide: React.FC = () => {
 
         <div className="grid grid-cols-4 gap-4 mt-20 relative">
           {/* Horizontal Line */}
-          <div className="absolute top-1/2 left-0 right-0 h-1 bg-black/10 -translate-y-1/2" style={{ marginTop: "-210px" }} />
+          <div className="absolute top-1/2 left-0 right-0 h-1 bg-black/10 -translate-y-1/2" style={{ marginTop: "-250px" }} />
 
           {GOALS.map((g, i) => (
             <motion.div key={i} initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.2 }} className="relative z-10">
               <div className={`w-full p-10 bg-white border-4 ${i === 3 ? "border-[#E2FF00]" : "border-black"} hover:shadow-2xl transition-all group`}>
                 <span className="text-xl font-black text-black/20 block mb-2">{g.week}</span>
-                <h3 className="text-4xl font-black mb-4 group-hover:text-[#E2FF00] transition-colors">{g.title}</h3>
+                {i === 0 && (
+                  <h3 className="text-4xl font-black mb-4 group-hover:text-[#222] transition-colors" style={{ color: "#aaa" }}>
+                    {g.title}
+                  </h3>
+                )}
+                {i !== 0 && i !== 3 && <h3 className="text-4xl font-black mb-4 group-hover:text-[#7FFFD4] transition-colors">{g.title}</h3>}
+                {i === 3 && <h3 className="text-4xl font-black mb-4 group-hover:text-[#E2FF00] transition-colors">{g.title}</h3>}
+                {/* <h3 className="text-4xl font-black mb-4 group-hover:text-[#E2FF00] transition-colors">{g.title}</h3> */}
                 <ul className="space-y-2">
                   {g.desc.map((p, pi) => (
                     <li key={pi} className="text-black/60 font-medium text-lg flex items-center gap-2">
@@ -58,7 +70,7 @@ const RoadmapSlide: React.FC = () => {
               </div>
               <div
                 className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full border-4 border-white ${i === 3 ? "bg-[#E2FF00]" : "bg-black"}`}
-                style={{ marginTop: "-210px" }}
+                style={{ marginTop: "-250px" }}
               />
             </motion.div>
           ))}

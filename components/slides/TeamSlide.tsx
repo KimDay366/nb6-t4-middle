@@ -2,15 +2,33 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const TEAM = [
-  { name: "오윤", role: "Leader / Backend", parts: ["DB Schema Design", "Auth API"], color: "#E2FF00", img: "oy.png" },
-  { name: "김민혁", role: "Frontend Architect", parts: ["State Management", "UI/UX Design", "Chart Library"], color: "#7FFFD4" },
-  { name: "김지선", role: "Backend Dev", parts: ["Search Engine", "Notification API", "Deployment"], color: "#E2FF00" },
+  {
+    name: "오윤",
+    role: "Leader / Backend Dev ",
+    parts: ["공용 개발 파일 제작", "인증 파트(router: /auth) - refresh 토큰 갱신", "멤버 파트 (router: /invitations)", "하위 할일 파트 (router: /subtasks)"],
+    color: "#7FFFD4",
+    img: "oy.png",
+  },
+  {
+    name: "김민혁",
+    role: "Backend Dev / Git & notion direct",
+    parts: ["Git & Notion 관리자", "인증 파트(router: /auth) - 회원가입 ", "프로젝트 파트(router: /projects)", "댓글 파트(router: /comments)"],
+    color: "#E2FF00",
+    img: "oy.png",
+  },
+  {
+    name: "김지선",
+    role: "Backend Dev / 기타 자료 정리",
+    parts: ["공용 문서 관리 및 발표 자료 제작", "인증 파트(router: /auth) - 로그인 및 토큰 발급 ", "유저 파트(router: /users)", "할일 파트(router: /tasks)"],
+    color: "#E2FF00",
+    img: "oy.png",
+  },
 ];
 
 const TeamSlide: React.FC = () => {
   return (
     <div className="w-full h-full p-24 bg-white">
-      <div className="flex justify-between items-start mb-24">
+      <div className="flex justify-between items-start mb-24" style={{ marginBottom: "20px" }}>
         <motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }}>
           <h2 className="text-7xl font-black text-black">TEAM MEMBERS</h2>
           <p className="text-2xl text-black/50 mt-4">함께 성장을 만들어가는 우리 팀원들을 소개합니다.</p>
@@ -22,7 +40,11 @@ const TeamSlide: React.FC = () => {
         {TEAM.map((m, i) => (
           <motion.div key={i} initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.15 }} className="group relative">
             <div className="h-[400px] bg-gray-100 mb-8 overflow-hidden relative">
-              <img src={`img/${m.img}/500/800`} alt={m.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500" />
+              <img
+                src={`https://github.com/KimDay366/nb6-t4-middle/blob/main/img/${m.img}/500/800`}
+                alt={`${m.name} 이미지`}
+                className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+              />
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ backgroundColor: `${m.color}33` }} />
             </div>
 

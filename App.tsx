@@ -16,7 +16,8 @@ import TroubleSlide2 from "./components/slides/TroubleSlide2";
 import TroubleSlide3 from "./components/slides/TroubleSlide3";
 import RoadmapSlide from "./components/slides/RoadmapSlide";
 
-const SLIDE_IDS: SlideID[] = ["main", "toc", "team", "progress", "details", "features", "f-detail-1", "f-detail-2", "f-detail-3", "trouble-1", "trouble-2", "trouble-3", "roadmap"];
+const SLIDE_IDS: SlideID[] = ["main", "toc", "team", "progress", "features", "f-detail-1", "f-detail-2", "f-detail-3", "trouble-1", "trouble-2", "trouble-3", "roadmap"];
+// SLIDE_IDS 제거 : "details",
 
 export default function App() {
   const [currentIdx, setCurrentIdx] = useState(0);
@@ -166,10 +167,10 @@ export default function App() {
         </button>
 
         {/* Floating Controls (Bottom Right) */}
-        <div className="absolute bottom-12 right-12 z-50 flex items-center gap-8 bg-white/90 backdrop-blur-md p-6 rounded-2xl border border-black/10 shadow-xl">
+        <div className="absolute bottom-10 right-10 z-50 flex items-center gap-8 bg-white/70 backdrop-blur-md p-4 rounded-2xl border border-black/10 shadow-xl">
           <div className="flex flex-col items-end">
             <span className="text-black/30 text-xl font-black tracking-tighter uppercase">Section</span>
-            <div className="text-black font-black text-6xl leading-none">
+            <div className="text-black font-black text-5xl leading-none">
               {String(currentIdx + 1).padStart(2, "0")}
               <span className="text-black/20 text-3xl mx-2">/</span>
               <span className="text-black/20 text-3xl">{String(SLIDE_IDS.length).padStart(2, "0")}</span>
@@ -180,14 +181,14 @@ export default function App() {
             <button
               onClick={() => paginate(-1)}
               disabled={currentIdx === 0}
-              className="w-20 h-20 rounded-xl border-4 border-black flex items-center justify-center hover:bg-black hover:text-white transition-all disabled:opacity-5 group"
+              className="w-15 h-20 rounded-xl border-4 border-black flex items-center justify-center hover:bg-black hover:text-white transition-all disabled:opacity-5 group"
             >
               <ChevronLeft size={40} className="group-hover:-translate-x-1 transition-transform" />
             </button>
             <button
               onClick={() => paginate(1)}
               disabled={currentIdx === SLIDE_IDS.length - 1}
-              className="w-20 h-20 rounded-xl border-4 border-black flex items-center justify-center hover:bg-black hover:text-[#E2FF00] transition-all disabled:opacity-5 group"
+              className="w-15 h-20 rounded-xl border-4 border-black flex items-center justify-center hover:bg-black hover:text-[#E2FF00] transition-all disabled:opacity-5 group"
             >
               <ChevronRight size={40} className="group-hover:translate-x-1 transition-transform" />
             </button>
