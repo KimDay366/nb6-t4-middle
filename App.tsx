@@ -76,8 +76,8 @@ export default function App() {
         return <TeamSlide />;
       case "progress":
         return <ProgressSlide />;
-      case "details":
-        return <DetailsSlide />;
+      // case "details":
+      //   return <DetailsSlide />;
       case "features":
         return <FeaturesSlide onNavigate={goToSlideById} />;
       case "f-detail-1":
@@ -150,7 +150,7 @@ export default function App() {
         <div className="absolute top-12 left-12 z-50 pointer-events-none">
           <div className="flex items-center gap-4">
             <div className="w-2 h-12 bg-[#E2FF00]" />
-            <span className="text-black font-black text-2xl tracking-[0.4em] uppercase">Neon Mind Project</span>
+            <span className="text-black font-black text-2xl tracking-[0.4em] uppercase">TEAM4 MOONSHOT PROJECT</span>
           </div>
         </div>
 

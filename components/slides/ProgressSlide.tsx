@@ -1,33 +1,36 @@
-
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ResponsiveContainer, PieChart, Pie, Cell, Tooltip } from 'recharts';
+import React from "react";
+import { motion } from "framer-motion";
+import { ResponsiveContainer, PieChart, Pie, Cell, Tooltip } from "recharts";
 
 const DATA = [
-  { name: 'Completed', value: 75, color: '#7FFFD4' },
-  { name: 'Ongoing', value: 15, color: '#E2FF00' },
-  { name: 'Todo', value: 10, color: '#000000' },
+  { name: "진행 완료", value: 20, color: "#7FFFD4" },
+  { name: "작업 중", value: 15, color: "#E2FF00" },
+  { name: "진행 예정", value: 65, color: "#000000" },
 ];
 
 const ProgressSlide: React.FC = () => {
   return (
     <div className="w-full h-full p-24 bg-white flex flex-col">
       <div className="flex items-end justify-between mb-20">
-         <div>
-            <h2 className="text-8xl font-black text-black leading-none">PROJECT<br/>STATUS</h2>
-            <div className="h-4 w-60 bg-[#E2FF00] mt-6" />
-         </div>
-         <div className="text-right">
-            <div className="text-black/40 text-xl font-bold uppercase mb-2">Overall Progress</div>
-            <div className="text-[140px] font-black leading-none text-black">75%</div>
-         </div>
+        <div>
+          <h2 className="text-8xl font-black text-black leading-none">
+            PROJECT
+            <br />
+            STATUS
+          </h2>
+          <div className="h-4 w-60 bg-[#E2FF00] mt-6" />
+        </div>
+        <div className="text-right">
+          <div className="text-black/40 text-xl font-bold uppercase mb-2">전체 진행 상황</div>
+          <div className="text-[140px] font-black leading-none text-black">20%</div>
+        </div>
       </div>
 
       <div className="flex-1 flex gap-20">
         <div className="w-1/2 flex flex-col justify-center">
           <div className="grid grid-cols-1 gap-12">
             {DATA.map((item, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -47,14 +50,7 @@ const ProgressSlide: React.FC = () => {
         <div className="w-1/2 relative flex items-center justify-center">
           <ResponsiveContainer width="100%" height={600}>
             <PieChart>
-              <Pie
-                data={DATA}
-                innerRadius={180}
-                outerRadius={280}
-                paddingAngle={5}
-                dataKey="value"
-                animationDuration={1500}
-              >
+              <Pie data={DATA} innerRadius={180} outerRadius={280} paddingAngle={5} dataKey="value" animationDuration={1500}>
                 {DATA.map((entry, index) => (
                   <Cell key={`cell-${index}`} fill={entry.color} />
                 ))}
