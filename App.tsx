@@ -5,6 +5,7 @@ import { SlideID } from "./types";
 import MainSlide from "./components/slides/MainSlide";
 import TocSlide from "./components/slides/TocSlide";
 import TeamSlide from "./components/slides/TeamSlide";
+import TeamSlideOrigin from "./components/slides/TeamSlide_origin";
 import ProgressSlide from "./components/slides/ProgressSlide";
 import DetailsSlide from "./components/slides/DetailsSlide";
 import FeaturesSlide from "./components/slides/FeaturesSlide";
@@ -16,7 +17,7 @@ import TroubleSlide2 from "./components/slides/TroubleSlide2";
 import TroubleSlide3 from "./components/slides/TroubleSlide3";
 import RoadmapSlide from "./components/slides/RoadmapSlide";
 
-const SLIDE_IDS: SlideID[] = ["main", "toc", "team", "progress", "features", "f-detail-1", "f-detail-2", "f-detail-3", "trouble-1", "trouble-2", "trouble-3", "roadmap"];
+const SLIDE_IDS: SlideID[] = ["main", "toc", "team", "teamorigin", "progress", "features", "f-detail-1", "f-detail-2", "f-detail-3", "trouble-1", "trouble-2", "trouble-3", "roadmap"];
 // SLIDE_IDS 제거 : "details",
 
 export default function App() {
@@ -75,6 +76,8 @@ export default function App() {
         return <TocSlide onNavigate={goToSlideById} />;
       case "team":
         return <TeamSlide />;
+      case "teamorigin":
+        return <TeamSlideOrigin />;
       case "progress":
         return <ProgressSlide />;
       // case "details":
