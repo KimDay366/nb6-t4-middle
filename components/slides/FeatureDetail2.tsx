@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function FeatureDetail1() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="w-full h-full p-24 bg-white flex flex-col">
       <div className="flex gap-20 h-full">
@@ -44,12 +45,41 @@ export default function FeatureDetail1() {
         {/* Right Side: Huge Screenshot */}
         <div className="flex-1 relative">
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="w-full h-full bg-[#fff]/5  overflow-hidden ">
-            <img src="../../img/ERD_fin.png" className="w-full object-cover border-[2px] border-black" alt="Chat ScreenShot" style={{ marginTop: "150px" }} />
+            <img
+              src="../../img/ERD_fin.png"
+              className="w-full object-cover border-[2px] border-black"
+              alt="Chat ScreenShot"
+              style={{ marginTop: "150px", cursor: "pointer" }}
+              onClick={() => setIsOpen(true)}
+            />
+
             {/* <div className="absolute top-10 right-10 bg-black text-[#E2FF00] px-6 py-3 text-2xl font-black italic">MAIN UI_v2.0</div> */}
           </motion.div>
 
           {/* Decorative elements */}
           <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#7FFFD4] -z-10" />
+
+          <AnimatePresence>
+            {isOpen && (
+              <motion.div
+                className="fixed inset-0 z-500 bg-black/80 flex items-center justify-center"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                onClick={() => setIsOpen(false)}
+                style={{ zIndex: "5000" }}
+              >
+                <motion.img
+                  src="../../img/ERD_fin.png"
+                  className="max-w-[90vw] max-h-[90vh] border-4 border-white"
+                  initial={{ scale: 0.8 }}
+                  animate={{ scale: 1.3 }}
+                  exit={{ scale: 0.8 }}
+                  onClick={(e) => e.stopPropagation()} // 배경 클릭만 닫히게
+                />
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </div>
     </div>
