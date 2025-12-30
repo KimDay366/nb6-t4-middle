@@ -37,7 +37,7 @@ const FEATURES: FeatureItem[] = [
     title: "Auth(일반 유저) 구현",
     desc: "",
     img: "restApiAuth.png",
-    color: "#7FFFD4",
+    color: "#E2FF00",
     targetId: "f-detail-3",
   },
 ];
