@@ -17,8 +17,8 @@ import TroubleSlide2 from "./components/slides/TroubleSlide2";
 import TroubleSlide3 from "./components/slides/TroubleSlide3";
 import RoadmapSlide from "./components/slides/RoadmapSlide";
 
-const SLIDE_IDS: SlideID[] = ["main", "toc", "team", "teamorigin", "progress", "features", "f-detail-1", "f-detail-2", "f-detail-3", "trouble-1", "trouble-2", "trouble-3", "roadmap"];
-// SLIDE_IDS 제거 : "details",
+const SLIDE_IDS: SlideID[] = ["main", "toc", "team", "progress", "features", "f-detail-1", "f-detail-2", "f-detail-3", "trouble-1", "trouble-2", "trouble-3", "roadmap"];
+// SLIDE_IDS 제거 : "details", "teamorigin",
 
 export default function App() {
   const [currentIdx, setCurrentIdx] = useState(0);
@@ -76,8 +76,8 @@ export default function App() {
         return <TocSlide onNavigate={goToSlideById} />;
       case "team":
         return <TeamSlide />;
-      case "teamorigin":
-        return <TeamSlideOrigin />;
+      // case "teamorigin":
+      //   return <TeamSlideOrigin />;
       case "progress":
         return <ProgressSlide />;
       // case "details":
