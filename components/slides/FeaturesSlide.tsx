@@ -21,7 +21,7 @@ const FEATURES: FeatureItem[] = [
     title: "노션을 활용한 팀 작업",
     desc: " ",
     img: "timeline.png",
-    color: "#E2FF00",
+    color: "#7FFFD4",
     targetId: "f-detail-1",
   },
   {
@@ -37,7 +37,7 @@ const FEATURES: FeatureItem[] = [
     title: "Auth(일반 유저) 구현",
     desc: "",
     img: "restApiAuth.png",
-    color: "#E2FF00",
+    color: "#7FFFD4",
     targetId: "f-detail-3",
   },
 ];
