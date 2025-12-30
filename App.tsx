@@ -17,8 +17,8 @@ import TroubleSlide2 from "./components/slides/TroubleSlide2";
 import TroubleSlide3 from "./components/slides/TroubleSlide3";
 import RoadmapSlide from "./components/slides/RoadmapSlide";
 
-const SLIDE_IDS: SlideID[] = ["main", "toc", "team", "progress", "features", "f-detail-1", "f-detail-2", "f-detail-3", "trouble-1", "trouble-2", "trouble-3", "roadmap"];
-// SLIDE_IDS 제거 : "details", "teamorigin",
+const SLIDE_IDS: SlideID[] = ["main", "toc", "team", "progress", "features", "f-detail-1", "f-detail-2", "f-detail-3", "roadmap"];
+// SLIDE_IDS 제거 : "details", "trouble-1", "trouble-2", "trouble-3","teamorigin",
 
 export default function App() {
   const [currentIdx, setCurrentIdx] = useState(0);
@@ -90,12 +90,12 @@ export default function App() {
         return <FeatureDetail2 />;
       case "f-detail-3":
         return <FeatureDetail3 />;
-      case "trouble-1":
-        return <TroubleSlide1 />;
-      case "trouble-2":
-        return <TroubleSlide2 />;
-      case "trouble-3":
-        return <TroubleSlide3 />;
+      // case "trouble-1":
+      //   return <TroubleSlide1 />;
+      // case "trouble-2":
+      //   return <TroubleSlide2 />;
+      // case "trouble-3":
+      //   return <TroubleSlide3 />;
       case "roadmap":
         return <RoadmapSlide />;
       default:

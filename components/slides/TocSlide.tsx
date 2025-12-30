@@ -20,8 +20,8 @@ const ITEMS: TocItem[] = [
   { id: 4, title: "진행 상황", desc: "Project Progress", slideId: "progress" },
   // { id: 5, title: "세부 작업 내용", desc: "Done & To-do", slideId: "details" },
   { id: 5, title: "주요 구현 내용", desc: "Key Functions", slideId: "features" },
-  { id: 6, title: "TROUBLE SHOOTING", desc: "Troubleshooting", slideId: "trouble-1" },
-  { id: 7, title: "최종 목표", desc: "Final Roadmap", slideId: "roadmap" },
+  // { id: 6, title: "TROUBLE SHOOTING", desc: "Troubleshooting", slideId: "trouble-1" },
+  { id: 6, title: "최종 목표", desc: "Final Roadmap", slideId: "roadmap" },
 ];
 
 const TocSlide: React.FC<TocSlideProps> = ({ onNavigate }) => {
