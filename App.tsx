@@ -15,9 +15,10 @@ import FeatureDetail3 from "./components/slides/FeatureDetail3";
 import TroubleSlide1 from "./components/slides/TroubleSlide1";
 import TroubleSlide2 from "./components/slides/TroubleSlide2";
 import TroubleSlide3 from "./components/slides/TroubleSlide3";
+import TroubleSlide4 from "./components/slides/TroubleSlide4";
 import RoadmapSlide from "./components/slides/RoadmapSlide";
 
-const SLIDE_IDS: SlideID[] = ["main", "toc", "team", "progress", "features", "f-detail-1", "f-detail-2", "f-detail-3", "roadmap"];
+const SLIDE_IDS: SlideID[] = ["main", "toc", "team", "progress", "features", "f-detail-1", "f-detail-2", "f-detail-3", "trouble-1", "trouble-2", "trouble-3", "trouble-4", "roadmap"];
 // SLIDE_IDS 제거 : "details", "trouble-1", "trouble-2", "trouble-3","teamorigin",
 
 export default function App() {
@@ -76,12 +77,8 @@ export default function App() {
         return <TocSlide onNavigate={goToSlideById} />;
       case "team":
         return <TeamSlide />;
-      // case "teamorigin":
-      //   return <TeamSlideOrigin />;
       case "progress":
         return <ProgressSlide />;
-      // case "details":
-      //   return <DetailsSlide />;
       case "features":
         return <FeaturesSlide onNavigate={goToSlideById} />;
       case "f-detail-1":
@@ -90,12 +87,14 @@ export default function App() {
         return <FeatureDetail2 />;
       case "f-detail-3":
         return <FeatureDetail3 />;
-      // case "trouble-1":
-      //   return <TroubleSlide1 />;
-      // case "trouble-2":
-      //   return <TroubleSlide2 />;
-      // case "trouble-3":
-      //   return <TroubleSlide3 />;
+      case "trouble-1":
+        return <TroubleSlide1 />;
+      case "trouble-2":
+        return <TroubleSlide2 />;
+      case "trouble-3":
+        return <TroubleSlide3 />;
+      case "trouble-4":
+        return <TroubleSlide4 />;
       case "roadmap":
         return <RoadmapSlide />;
       default:

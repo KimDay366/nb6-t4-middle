@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import { ResponsiveContainer, PieChart, Pie, Cell, Tooltip } from "recharts";
 
 const DATA = [
-  { name: "진행 완료", value: 20, color: "#7FFFD4" },
-  { name: "작업 중", value: 15, color: "#E2FF00" },
-  { name: "진행 예정", value: 65, color: "#000000" },
+  { name: "진행 완료", value: 100, color: "#7FFFD4" },
+  { name: "작업 중", value: 0, color: "#E2FF00" },
+  { name: "진행 예정", value: 0, color: "#000000" },
 ];
 
 const ProgressSlide: React.FC = () => {
@@ -22,7 +22,7 @@ const ProgressSlide: React.FC = () => {
         </div>
         <div className="text-right">
           <div className="text-black/40 text-xl font-bold uppercase mb-2">전체 진행 상황</div>
-          <div className="text-[140px] font-black leading-none text-black">20%</div>
+          <div className="text-[140px] font-black leading-none text-black">100%</div>
         </div>
       </div>
 

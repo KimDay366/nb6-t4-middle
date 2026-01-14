@@ -30,7 +30,7 @@ const MainSlide: React.FC = () => {
         <motion.h1 initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="text-[150px] leading-[0.9] font-black italic text-black">
           MOONSHOT
           <br />
-          중간 발표
+          최종 발표
           <br />
           <span className="text-transparent" style={{ WebkitTextStroke: "2px black" }}>
             TEAM4

@@ -42,13 +42,8 @@ const RoadmapSlide: React.FC = () => {
             <motion.div key={i} initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.2 }} className="relative z-10">
               <div className={`w-full p-10 bg-white border-4 ${i === 3 ? "border-[#E2FF00]" : "border-black"} hover:shadow-2xl transition-all group`}>
                 <span className="text-xl font-black text-black/20 block mb-2">{g.week}</span>
-                {i === 0 && (
-                  <h3 className="text-4xl font-black mb-4 group-hover:text-[#222] transition-colors" style={{ color: "#aaa" }}>
-                    {g.title}
-                  </h3>
-                )}
-                {i !== 0 && i !== 3 && <h3 className="text-4xl font-black mb-4 group-hover:text-[#7FFFD4] transition-colors">{g.title}</h3>}
-                {i === 3 && <h3 className="text-4xl font-black mb-4 group-hover:text-[#E2FF00] transition-colors">{g.title}</h3>}
+                {i !== 3 && <h3 className="text-4xl font-black mb-4 group-hover:text-[#48B3AF] transition-colors">{g.title}</h3>}
+                {i === 3 && <h3 className="text-4xl font-black mb-4 group-hover:text-[#98CD00] transition-colors">{g.title}</h3>}
                 {/* <h3 className="text-4xl font-black mb-4 group-hover:text-[#E2FF00] transition-colors">{g.title}</h3> */}
                 <ul className="space-y-2">
                   {g.desc.map((p, pi) => (
