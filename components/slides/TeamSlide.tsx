@@ -1,10 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-// import oyImg from "../public/img/oy";
-// import mhImg from "../../img/mh";
-// import jsImg from "../../img/js";
-
 const TEAM = [
   {
     name: "오윤",
@@ -37,7 +33,6 @@ const TeamSlide: React.FC = () => {
           <h2 className="text-7xl font-black text-black">TEAM MEMBERS</h2>
           <p className="text-2xl text-black/50 mt-4">함께 성장을 만들어가는 우리 팀원들을 소개합니다.</p>
         </motion.div>
-        {/* <div className="bg-black text-white px-8 py-4 text-3xl font-black rotate-3">3 PROFESSIONALS</div> */}
       </div>
 
       <div className="grid grid-cols-3 gap-8" style={{ paddingTop: "30px" }}>

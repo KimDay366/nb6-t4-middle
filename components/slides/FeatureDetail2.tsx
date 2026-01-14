@@ -41,59 +41,10 @@ export default function FeatureDetail1() {
                 </p>
               </div>
             </div>
-
-            {/* <ul className="space-y-4">
-              {["수정 필요 1", "수정 필요 2", "수정 필요 3"].map((item, i) => (
-                <li key={i} className="flex items-center gap-4 text-xl font-bold">
-                  <div className="w-3 h-3 bg-black rounded-full" /> {item}
-                </li>
-              ))}
-            </ul> */}
           </div>
         </div>
 
-        {/* Right Side: Huge Screenshot */}
-        {/* <div className="flex-1 relative">
-          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="w-full h-full bg-[#fff]/5  overflow-hidden ">
-            <img
-              src="../../img/ERD_fin.png"
-              className="w-full object-cover border-[2px] border-black"
-              alt="Chat ScreenShot"
-              style={{ marginTop: "150px", cursor: "pointer" }}
-              onClick={() => setIsOpen(true)} */}
-        {/* /> */}
-
-        {/* <div className="absolute top-10 right-10 bg-black text-[#E2FF00] px-6 py-3 text-2xl font-black italic">MAIN UI_v2.0</div> */}
-        {/* </motion.div> */}
-
-        {/* Decorative elements */}
-        {/* <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#7FFFD4] -z-10" /> */}
-
-        {/* <AnimatePresence>
-            {isOpen && (
-              <motion.div
-                className="fixed inset-0 z-500 bg-black/80 flex items-center justify-center"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                onClick={() => setIsOpen(false)}
-                style={{ zIndex: "5000" }}
-              >
-                <motion.img
-                  src="../../img/ERD_fin.png"
-                  className="max-w-[90vw] max-h-[90vh] border-4 border-white"
-                  initial={{ scale: 0.8 }}
-                  animate={{ scale: 1.3 }}
-                  exit={{ scale: 0.8 }}
-                  onClick={(e) => e.stopPropagation()} // 배경 클릭만 닫히게
-                />
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div> */}
-
         <div className="flex-1 relative overflow-hidden">
-          {/* 슬라이드 영역 */}
           <motion.div className="flex" animate={{ x: `-${index * 100}%` }} transition={{ type: "spring", stiffness: 200, damping: 25 }}>
             {images.map((src, i) => (
               <div key={i} className="min-w-full flex justify-center">
@@ -102,7 +53,6 @@ export default function FeatureDetail1() {
             ))}
           </motion.div>
 
-          {/* 좌우 버튼 */}
           <div className="absolute bottom-10 left-10 flex gap-4">
             <button onClick={prev} className="px-6 py-3 bg-black text-[#fff] font-black">
               ←
@@ -112,7 +62,6 @@ export default function FeatureDetail1() {
             </button>
           </div>
 
-          {/* 확대 모달 */}
           <AnimatePresence>
             {isOpen && (
               <motion.div

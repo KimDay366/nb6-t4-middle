@@ -28,10 +28,6 @@ const RoadmapSlide: React.FC = () => {
             <br />
             DESTINATION
           </h2>
-          {/* <div className="flex items-center gap-6">
-            <div className="px-6 py-2 bg-[#E2FF00] text-black font-black text-2xl">ROADMAP</div>
-            <div className="text-2xl text-black/30 font-bold uppercase tracking-widest italic"></div>
-          </div> */}
         </div>
 
         <div className="grid grid-cols-4 gap-4 mt-20 relative">
@@ -44,7 +40,6 @@ const RoadmapSlide: React.FC = () => {
                 <span className="text-xl font-black text-black/20 block mb-2">{g.week}</span>
                 {i !== 3 && <h3 className="text-4xl font-black mb-4 group-hover:text-[#48B3AF] transition-colors">{g.title}</h3>}
                 {i === 3 && <h3 className="text-4xl font-black mb-4 group-hover:text-[#98CD00] transition-colors">{g.title}</h3>}
-                {/* <h3 className="text-4xl font-black mb-4 group-hover:text-[#E2FF00] transition-colors">{g.title}</h3> */}
                 <ul className="space-y-2">
                   {g.desc.map((p, pi) => (
                     <li key={pi} className="text-black/60 font-medium text-lg flex items-center gap-2">
@@ -73,19 +68,8 @@ const RoadmapSlide: React.FC = () => {
 
         <div className="mt-20 flex justify-between items-end">
           <div className="max-w-2xl">
-            <p className="text-3xl font-bold leading-tight">
-              {/* 감사합니다.  */}
-              {/* <br />
-              <span className="text-[#E2FF00] bg-black px-2">사용자에게 가치를 주는 서비스</span>를 만듭니다. */}
-            </p>
+            <p className="text-3xl font-bold leading-tight"></p>
           </div>
-          {/* <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-12 py-6 bg-black text-white text-3xl font-black hover:bg-[#7FFFD4] hover:text-black transition-all italic"
-          >
-            GET IN TOUCH →
-          </motion.button> */}
         </div>
       </div>
     </div>

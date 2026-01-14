@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { AlertTriangle, CheckCircle } from "lucide-react";
 
-const images = ["project.png", "document_fin.png", "timeline_fin.png", "prlog_fin.png", "gitlog_fin.png"];
+const images = ["/img/oauthworkflow.png", "/img/ts_oauth.png"];
 
 export default function TroubleSlide1() {
   const [index, setIndex] = useState(0);
@@ -12,7 +12,7 @@ export default function TroubleSlide1() {
   return (
     <div className="w-full h-full p-24 bg-white flex flex-col justify-center">
       <div className="mb-16">
-        <span className="text-3xl font-black text-white bg-red-600 px-6 py-2 mb-6 inline-block uppercase tracking-tighter italic">Troubleshooting #01</span>
+        <span className="text-3xl font-black text-white bg-red-600 px-6 py-2 mb-6 inline-block uppercase tracking-tighter italic">Troubleshooting #03</span>
         <h2 className="text-8xl font-black text-black leading-none uppercase tracking-tighter">구글 Oauth 구현</h2>
       </div>
 
@@ -43,25 +43,21 @@ export default function TroubleSlide1() {
           </div>
         </motion.div>
 
-        <div className="flex-1 relative overflow-hidden">
+        <div className="flex-1 relative overflow-hidden h-[600px]">
           <div className="w-full h-full bg-[#fff]/5 shadow-2xl relative">
             <AnimatePresence mode="wait">
               <motion.img
                 key={index}
-                src={`../../img/${images[index]}`}
+                src={images[index]}
                 alt="Chat Screenshot"
                 className="absolute inset-0 w-full object-cover border-2px border-black "
                 initial={{ opacity: 0, x: 80 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -80 }}
                 transition={{ duration: 0.4, ease: "easeOut" }}
-                style={{ width: "100%", top: "10%", border: "2px solid #000" }}
+                style={{ width: "100%", border: "2px solid #000" }}
               />
             </AnimatePresence>
-
-            {/* <div className="absolute top-10 right-10 bg-black text-[#E2FF00] px-6 py-3 text-2xl font-black italic">MAIN UI_v{index + 1}.0</div> */}
-
-            {/* Controls */}
             <div className="absolute bottom-10 left-10 flex gap-4">
               <button onClick={prev} className="px-6 py-3 bg-black text-[#fff] font-black">
                 ←
@@ -71,10 +67,8 @@ export default function TroubleSlide1() {
               </button>
             </div>
           </div>
-          {/* Decorative elements */}
           <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#7FFFD4] -z-10" />
         </div>
-        {/* <div className="absolute -top-10 -right-10 bg-[#E2FF00] text-black px-8 py-4 font-black text-4xl">Result: 120fps</div> */}
       </div>
     </div>
   );

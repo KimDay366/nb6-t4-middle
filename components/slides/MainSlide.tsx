@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 const MainSlide: React.FC = () => {
   return (
     <div className="w-full h-full flex flex-col justify-center items-center px-40 relative overflow-hidden bg-white">
-      {/* Animated Background Elements */}
       <motion.div
         animate={{
           rotate: 360,
@@ -48,7 +47,6 @@ const MainSlide: React.FC = () => {
             <br /> 중급 프로젝트 결과물을 소개합니다.
           </div>
           <div className="text-right">
-            {/* <div className="text-[#E2FF00] bg-black px-4 py-1 inline-block text-xl font-black mb-2 uppercase">Team. Neon Mind</div> */}
             <div className="text-black/40 text-lg uppercase tracking-wider">2025 CODEIT BootCamp</div>
           </div>
         </motion.div>

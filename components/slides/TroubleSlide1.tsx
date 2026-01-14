@@ -6,7 +6,7 @@ export default function TroubleSlide1() {
   return (
     <div className="w-full h-full p-24 bg-white flex flex-col justify-center">
       <div className="mb-16">
-        <span className="text-3xl font-black text-white bg-red-600 px-6 py-2 mb-6 inline-block uppercase tracking-tighter italic">Troubleshooting #03</span>
+        <span className="text-3xl font-black text-white bg-red-600 px-6 py-2 mb-6 inline-block uppercase tracking-tighter italic">Troubleshooting #01</span>
         <h2 className="text-8xl font-black text-black leading-none uppercase tracking-tighter">파일 저장에 대한 절대 경로 / 상대 경로</h2>
       </div>
 
@@ -43,7 +43,6 @@ export default function TroubleSlide1() {
               <img src={`../../img/fileurl.png`} className="w-full " />
             </div>
           </motion.div>
-          {/* <div className="absolute -top-10 -right-10 bg-[#E2FF00] text-black px-8 py-4 font-black text-4xl">Result: 120fps</div> */}
         </div>
       </div>
     </div>
