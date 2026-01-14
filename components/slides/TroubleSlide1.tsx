@@ -19,7 +19,7 @@ export default function TroubleSlide1() {
             <div>
               <h4 className="text-2xl font-black uppercase mb-4 text-red-600">The Problem</h4>
               <p className="text-3xl font-bold leading-tight break-keep">
-                파일 업로드 기능 구현 시, 클라이언트와 서버 간 파일 경로 처리 방식에서 절대 경로·상대 경로가 혼재되며 미리보기 불가, 잘못된 접근 오류가 반복적으로 발생
+                파일 업로드와 소셜 로그인 과정에서 절대 경로와 상대 경로가 구분되지 않은 채 동일하게 처리되어, 파일 및 프로필 이미지가 정상적으로 로딩되지 않는 문제가 발생
               </p>
             </div>
           </div>
@@ -31,7 +31,7 @@ export default function TroubleSlide1() {
             <div>
               <h4 className="text-2xl font-black uppercase mb-4 text-green-600">The Solution</h4>
               <p className="text-3xl font-bold leading-tight break-keep text-black/70 italic">
-                서버에서 파일 저장 시에는 상대 경로로 통일하고, 클라이언트로 전달하는 응답 단계에서만 BASE_URL을 조합하도록 구조를 분리
+                경로 생성 로직에 조건 분기를 추가해 서버 저장용 상대 경로와 클라이언트 제공용 절대 경로를 명확히 분리함으로써 문제를 해결
               </p>
             </div>
           </div>
