@@ -18,7 +18,7 @@ interface FeatureItem {
 const FEATURES: FeatureItem[] = [
   {
     id: "01",
-    title: "팀 작업 Tool : Notion & Github",
+    title: "팀 협업 Tool : Notion & Github",
     desc: " ",
     img: "timeline.png",
     color: "#7FFFD4",
@@ -26,7 +26,7 @@ const FEATURES: FeatureItem[] = [
   },
   {
     id: "02",
-    title: "ERD Modeling 작업",
+    title: "ERD Modeling & Prisma Schema 작업",
     desc: " ",
     img: "ERD_fin.png",
     color: "#E2FF00",
@@ -34,7 +34,7 @@ const FEATURES: FeatureItem[] = [
   },
   {
     id: "03",
-    title: "Auth(일반 유저) 구현",
+    title: "Auth(일반 유저) & Oauth - 구글 유저 구현",
     desc: "",
     img: "restApiAuth.png",
     color: "#7FFFD4",
@@ -42,11 +42,11 @@ const FEATURES: FeatureItem[] = [
   },
   {
     id: "04",
-    title: "Auth(일반 유저) 구현",
+    title: "다양한 기능 구현 및 최종 배포",
     desc: "",
-    img: "restApiAuth.png",
-    color: "#7FFFD4",
-    targetId: "f-detail-3",
+    img: "render.png",
+    color: "#E2FF00",
+    targetId: "f-detail-4",
   },
 ];
 
@@ -91,7 +91,10 @@ export default function FeaturesSlide({ onNavigate }: FeaturesSlideProps) {
             </div>
 
             <div className="flex flex-col">
-              <h3 className="text-5xl font-black tracking-tight group-hover:text-[#E2FF00] bg-black group-hover:bg-black transition-all inline-block px-4 py-2 self-start mb-4 text-white uppercase">
+              <h3
+                className="text-5xl font-black tracking-tight group-hover:text-[#E2FF00] bg-black group-hover:bg-black transition-all inline-block px-4 py-2 self-start mb-4 text-white uppercase"
+                style={{ lineHeight: "65px" }}
+              >
                 {feature.title}
               </h3>
               <p className="text-2xl font-medium text-black/50 leading-relaxed pr-8">{feature.desc}</p>

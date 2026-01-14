@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const images = ["prlog.png", "timeline.png", "project.png"];
+const images = ["project.png", "document_fin.png", "timeline_fin.png", "prlog_fin.png", "gitlog_fin.png"];
 
 export default function FeatureDetail1() {
   const [index, setIndex] = useState(0);
@@ -16,25 +16,34 @@ export default function FeatureDetail1() {
           <div>
             <span className="text-2xl font-black text-[#E2FF00] bg-black px-4 py-1 mb-6 inline-block">FUNCTION 01</span>
             <h2 className="text-7xl font-black text-black leading-tight uppercase mb-8">
-              노션을 활용한
-              <br /> 팀 작업
+              팀 협업 <br /> 노션 & 깃허브
             </h2>
             <p className="text-2xl font-medium text-black/60 leading-relaxed break-keep">
-              팀 작업을 하며 발생하는 "프로젝트 전체 문서 관리" <br /> 작업 진행에 대한 "데일리 스크럼 & 전체 스케줄 관리" <br /> Github 연동을 통한 "PR 로그 관리" 를 노션을 활용해 진행합니다. <br />
+              팀 작업을 하며 발생하는 "프로젝트 전체 문서 관리" <br /> 작업 진행에 대한 "데일리 스크럼 & 전체 스케줄 관리" <br /> Github 연동을 통한 "PR 로그 관리" 를 노션을 활용해 진행하였습니다.
+              <br />
+            </p>
+            <p className="text-2xl font-medium text-black/60 leading-relaxed break-keep" style={{ paddingTop: "10px" }}>
+              GitHub-flow 브랜치 전략을 기반으로 기능을 분리해 개발했습니다. Pull Request를 통해 코드 리뷰 및 머지를 진행하며 협업 품질을 높였습니다. Git 충돌 해결과 이력 관리를 통해 팀 개발 경험을
+              쌓았습니다.
+              <br />
             </p>
           </div>
 
           <div className="space-y-8">
             <div className="grid grid-cols-2 gap-4">
               <div className="p-6 bg-gray-50 border-l-8 border-[#E2FF00]">
-                <h4 className="text-xs font-black text-black/30 mb-2 uppercase">Tech Stack</h4>
-                <p className="text-xl font-bold">Notion</p>
-              </div>
-              <div className="p-6 bg-gray-50 border-l-8 border-[#7FFFD4]">
-                <h4 className="text-xs font-black text-black/30 mb-2 uppercase">Link</h4>
+                <h4 className="text-xs font-black text-black/30 mb-2 uppercase">Notion Link</h4>
                 <p className="text-xl font-bold">
                   <a href="https://www.notion.so/Team-Project-2ce61538a9e2806ba419d21e4473dc06?source=copy_link" target="_blank">
                     팀 노션 바로가기
+                  </a>
+                </p>
+              </div>
+              <div className="p-6 bg-gray-50 border-l-8 border-[#7FFFD4]">
+                <h4 className="text-xs font-black text-black/30 mb-2 uppercase">GitHub Link</h4>
+                <p className="text-xl font-bold">
+                  <a href="https://github.com/minyeok123/nb06-Moonshot-team04-AI_trio" target="_blank">
+                    팀 깃허브 바로가기
                   </a>
                 </p>
               </div>
@@ -74,7 +83,7 @@ export default function FeatureDetail1() {
                 key={index}
                 src={`../../img/${images[index]}`}
                 alt="Chat Screenshot"
-                className="absolute inset-0 w-full object-cover border-2px] border-black "
+                className="absolute inset-0 w-full object-cover border-2px border-black "
                 initial={{ opacity: 0, x: 80 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -80 }}

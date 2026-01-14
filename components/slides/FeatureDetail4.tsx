@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const images = ["restApiAuth.png", "authGitLog.png"];
+const images = ["render.png", "", "", "", ""];
 
 export default function FeatureDetail1() {
   const [index, setIndex] = useState(0);
@@ -16,18 +16,23 @@ export default function FeatureDetail1() {
           <div>
             <span className="text-2xl font-black text-[#E2FF00] bg-black px-4 py-1 mb-6 inline-block">FUNCTION 04</span>
             <h2 className="text-7xl font-black text-black leading-tight uppercase mb-8">
-              다른 작업 추가
-              <br />
-              +++ 작업
+              다양한 기능 구현 및 <br /> 최종 배포
             </h2>
-            <p className="text-2xl font-medium text-black/60 leading-relaxed break-keep">설명설명</p>
+            <p className="text-2xl font-medium text-black/60 leading-relaxed break-keep">
+              회원가입부터 프로젝트·업무 관리까지 이어지는 협업 시스템의 핵심 기능을 구현했습니다. 사용자 관리, 멤버 초대·권한 관리, 프로젝트 및 할 일·댓글 기능을 개발했습니다. 파일 업로드를 포함한
+              업무 흐름 전반을 통합해 실제 사용 가능한 서비스 구조를 완성했습니다.
+            </p>
           </div>
 
           <div className="space-y-8">
             <div className="grid grid-cols-2 gap-4">
               <div className="p-6 bg-gray-50 border-l-8 border-[#E2FF00]">
                 <h4 className="text-xs font-black text-black/30 mb-2 uppercase">Tech Stack</h4>
-                <p className="text-xl font-bold">VSCode & GitHub</p>
+                <p className="text-xl font-bold">
+                  <a href="https://www.notion.so/Team-Project-2ce61538a9e2806ba419d21e4473dc06?source=copy_link" target="_blank">
+                    렌더 링크 쓸까요?
+                  </a>
+                </p>
               </div>
               {/* <div className="p-6 bg-gray-50 border-l-8 border-[#7FFFD4]">
                 <h4 className="text-xs font-black text-black/30 mb-2 uppercase">Performance</h4>

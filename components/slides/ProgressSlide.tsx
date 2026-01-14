@@ -50,9 +50,15 @@ const ProgressSlide: React.FC = () => {
         <div className="w-1/2 relative flex items-center justify-center">
           <ResponsiveContainer width="100%" height={600}>
             <PieChart>
-              <Pie data={DATA} innerRadius={180} outerRadius={280} paddingAngle={5} dataKey="value" animationDuration={1500}>
+              <defs>
+                <linearGradient id="progressGradient" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stopColor="#7FFFD4" />
+                  <stop offset="100%" stopColor="#E2FF00" />
+                </linearGradient>
+              </defs>
+              <Pie data={DATA} innerRadius={180} outerRadius={280} paddingAngle={1} dataKey="value" animationDuration={1500}>
                 {DATA.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={entry.color} />
+                  <Cell key={`cell-${index}`} fill="url(#progressGradient)" />
                 ))}
               </Pie>
               <Tooltip />
