@@ -18,7 +18,7 @@ interface FeatureItem {
 const FEATURES: FeatureItem[] = [
   {
     id: "01",
-    title: "노션을 활용한 팀 작업",
+    title: "팀 작업 Tool : Notion & Github",
     desc: " ",
     img: "timeline.png",
     color: "#7FFFD4",
@@ -40,6 +40,14 @@ const FEATURES: FeatureItem[] = [
     color: "#7FFFD4",
     targetId: "f-detail-3",
   },
+  {
+    id: "04",
+    title: "Auth(일반 유저) 구현",
+    desc: "",
+    img: "restApiAuth.png",
+    color: "#7FFFD4",
+    targetId: "f-detail-3",
+  },
 ];
 
 export default function FeaturesSlide({ onNavigate }: FeaturesSlideProps) {
@@ -53,14 +61,14 @@ export default function FeaturesSlide({ onNavigate }: FeaturesSlideProps) {
             className="text-[90px] font-black leading-none tracking-tighter text-black uppercase "
             style={{ paddingTop: "15px" }}
           >
-            주요 구현 내용
+            주요 작업 내용
           </motion.h2>
           <motion.div initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ delay: 0.3, duration: 1 }} className="h-5 bg-[#E2FF00] absolute left-0 -bottom-5 w-full origin-left" />
         </div>
         <p className="text-xl font-black text-black/30 text-right uppercase tracking-widest max-w-xs">Click cards to see</p>
       </div>
 
-      <div className="flex-1 grid grid-cols-3 gap-16">
+      <div className="flex-1 grid grid-cols-4 gap-10">
         {FEATURES.map((feature, index) => (
           <motion.div
             key={feature.id}

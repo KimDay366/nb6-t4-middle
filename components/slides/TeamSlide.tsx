@@ -23,13 +23,7 @@ const TEAM = [
   {
     name: "김지선",
     role: "Backend Dev / 기타 자료 정리",
-    parts: [
-      "공용 문서 관리 및 발표 자료 제작",
-      "인증 파트(router: /auth) - 로그인 및 토큰 발급 ",
-      "유저 파트(router: /users)",
-      "할일 파트(router: /tasks)",
-      "파일 파트(router: /files) - 파일 업로드(with multer)",
-    ],
+    parts: ["공용 문서 관리 및 발표 자료 제작", "인증 파트(router: /auth) - 로그인 및 토큰 발급 ", "유저 파트(router: /users)", "할일 파트(router: /tasks)", "파일 파트(router: /files)"],
     color: "#E2FF00",
     img: "js.png",
   },
