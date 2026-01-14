@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const images = ["render.png", "googlecalendar.png"];
+const images = ["render.png", "googlecalendar.png", "APIDOC.png"];
 
 export default function FeatureDetail1() {
   const [index, setIndex] = useState(0);
@@ -27,10 +27,18 @@ export default function FeatureDetail1() {
           <div className="space-y-8">
             <div className="grid grid-cols-2 gap-4">
               <div className="p-6 bg-gray-50 border-l-8 border-[#E2FF00]">
-                <h4 className="text-xs font-black text-black/30 mb-2 uppercase">Tech Stack</h4>
+                <h4 className="text-xs font-black text-black/30 mb-2 uppercase">배포 Link</h4>
                 <p className="text-xl font-bold">
                   <a href="https://nb06-moonshot-team04-ai-trio.onrender.com/" target="_blank">
-                    렌더 배포 링크
+                    배포(렌더) 링크
+                  </a>
+                </p>
+              </div>
+              <div className="p-6 bg-gray-50 border-l-8 border-[#7FFFD4]">
+                <h4 className="text-xs font-black text-black/30 mb-2 uppercase">API 문서화 Link</h4>
+                <p className="text-xl font-bold">
+                  <a href="https://nb06-moonshot-team04-ai-trio.onrender.com/api-docs/" target="_blank">
+                    API 문서화 링크
                   </a>
                 </p>
               </div>
