@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const images = ["restApiAuth.png", "authGitLog.png", "", "", ""];
+const images = ["restApiAuth.png", "authGitLog.png", "oauthwork.png"];
 
 export default function FeatureDetail1() {
   const [index, setIndex] = useState(0);
@@ -22,7 +22,7 @@ export default function FeatureDetail1() {
             </h2>
             <p className="text-2xl font-medium text-black/60 leading-relaxed break-keep">
               전체 시스템에서 공통으로 사용되는 사용자 등록 기능을 구현했습니다. 일반 회원 가입과 OAuth 기반 구글 회원 가입을 각각 분리해 처리했습니다. Oauth의 전체 흐름을 파악하기 위하여 Passport를
-              사용하지 않고, 직접 전체 구조를 구현하였습니다 
+              사용하지 않고, 직접 전체 구조를 구현하였습니다
             </p>
           </div>
 

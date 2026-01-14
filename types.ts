@@ -1,19 +1,4 @@
-export type SlideID =
-  | "main"
-  | "toc"
-  | "team"
-  | "progress"
-  | "details"
-  | "features"
-  | "f-detail-1"
-  | "f-detail-2"
-  | "f-detail-3"
-  | "f-detail-4"
-  | "trouble-1"
-  | "trouble-2"
-  | "trouble-3"
-  | "trouble-4"
-  | "roadmap";
+export type SlideID = "main" | "toc" | "team" | "progress" | "details" | "features" | "f-detail-1" | "f-detail-2" | "f-detail-3" | "f-detail-4" | "trouble-1" | "trouble-2" | "trouble-3" | "roadmap";
 
 export interface TeamMember {
   name: string;
